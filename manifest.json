@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Marv's Font Changer",
+  "version": "1.3.2",
+  "description": "Ändert Schriftart und Schriftgröße auf Webseiten. Enthält OpenDyslexic zur Unterstützung beim Lesen.",
+  "permissions": ["activeTab", "scripting", "fontAccess", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Marv's Font Changer",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["inhalt.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "fonts/*.otf",
+        "fonts/*.woff2",
+        "fonts/*.woff",
+        "fonts/*.ttf"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
+

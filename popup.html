@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Marv's Font Changer</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="kopfbereich">
+    <div class="logo">Aa</div>
+    <div>
+      <h1>Font Changer</h1>
+      <p class="unterzeile">von Marv</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="feld">
+      <label for="schriftartAuswahl">Schriftart</label>
+      <select id="schriftartAuswahl">
+        <optgroup label="✨ Spezial-Schriften">
+          <option value="CUSTOM:OpenDyslexic">OpenDyslexic</option>
+        </optgroup>
+        <optgroup id="systemSchriftenGruppe" label="💻 System-Schriftarten">
+          <option value="" disabled selected>Lade Schriften …</option>
+        </optgroup>
+      </select>
+    </section>
+
+    <section class="feld">
+      <div class="slider-kopf">
+        <label for="groessenSlider">Schriftgröße</label>
+        <span id="groessenWert" class="slider-wert">0</span>
+      </div>
+      <input
+        type="range"
+        id="groessenSlider"
+        min="-5"
+        max="5"
+        step="1"
+        value="0"
+      />
+      <div class="slider-skala">
+        <span>kleiner</span>
+        <span>Standard</span>
+        <span>größer</span>
+      </div>
+      <p class="hinweis">
+        Verändert alle Textgrößen gleichmäßig relativ zu ihrer
+        Ausgangsgröße – Überschriften bleiben größer als Fließtext.
+      </p>
+    </section>
+
+    <button id="anwendenButton" class="primaer-button">
+      Auf Seite anwenden
+    </button>
+
+    <button id="zuruecksetzenButton" class="sekundaer-button">
+      Zurücksetzen
+    </button>
+  </main>
+
+  <footer>
+    <button id="optionenButton" class="link-button">
+      🔑 System-Schriften freischalten / neu laden
+    </button>
+  </footer>
+
+  <div id="statusBanner" class="status-banner" role="status" hidden></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
