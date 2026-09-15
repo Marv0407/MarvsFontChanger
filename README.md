@@ -26,7 +26,7 @@
 
 ## Installation
 
-- [Chrome Web Store](#) <!-- Link ergänzen, sobald veröffentlicht -->
+- [Chrome Web Store](https://chromewebstore.google.com/detail/hmldpfhcdkapjogebfjiomemfinhljof?utm_source=item-share-cb)
 - [Microsoft Edge Add-ons](#) <!-- Link ergänzen, sobald veröffentlicht -->
 
 ## Support & Fehler melden
